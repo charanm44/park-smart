@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "park-smart",
+      "public": "dist/park-smart",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

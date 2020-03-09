@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "webtest-b3c48": {
+      "hosting": {
+        "park-smart": [
+          "webtest-b3c48"
+        ]
+      }
+    }
+  }
+}
