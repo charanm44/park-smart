@@ -1,0 +1,14 @@
+<div class="content" *ngIf="!unknownParkingHide">
+    <mat-card class="parking">
+        <form>
+            <h1 class="header">{{ route.snapshot.paramMap.get('parking-id') }}</h1>
+            <div>
+                <mat-form-field>
+                    <mat-label>Access Code</mat-label>
+                    <input matInput placeholder="Ex. 5233" [formControl]="accessCode">
+                </mat-form-field>
+            </div>
+            <button class="top-nudge" mat-raised-button color="primary" [disabled]="!accessCode.valid" (click)="verifyAccessCode()">Park</button>
+        </form>
+    </mat-card>
+</div>

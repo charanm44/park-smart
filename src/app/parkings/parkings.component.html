@@ -1,0 +1,19 @@
+<div class="content">
+    <div class="parking-lots" *ngIf="response == null">
+        <mat-spinner></mat-spinner>
+    </div>
+    <div class="parking-lots" *ngIf="response != null">
+        <mat-card class="parking" *ngFor="let parking of parkings">
+            <h1 class="header">{{ parking }}</h1>
+            <div class="booking-status top-nudge">
+                <span><b>Status: </b></span>
+                <span class="status">
+                    {{ (response[parking] == 0 && response[parking + '_access_code'] == 0) ? 'Vacant' : (response[parking] == 0 && response[parking + '_access_code'] != 0) ? 'Booked' : 'Occupied' }}
+                </span>
+            </div>
+            <button class="top-nudge" mat-raised-button color="primary"
+                [disabled]="response[parking] != 0 || response[parking + '_access_code'] != 0"
+                (click)="showAccessCode(parking)">Book</button>
+        </mat-card>
+    </div>
+</div>

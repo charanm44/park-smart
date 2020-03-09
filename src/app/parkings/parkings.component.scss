@@ -1,0 +1,8 @@
+@import '../../styles/style.scss';
+
+.parking-lots {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    margin: 0 auto;
+}

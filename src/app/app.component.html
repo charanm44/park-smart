@@ -1,12 +1,1 @@
-<div class="parking-lots">
-  <mat-card class="parking">
-    <div class="header">P1</div>
-    <div class="booking-status">
-      <span><b>Status: </b></span>
-      <span class="status" *ngIf="response != null">
-        {{ (response.P1 == 0 && response.P1_access_code == 0) ? 'Vacant' : (response.P1 == 0 && response.P1_access_code != 0) ? 'Booked' : 'Occupied' }}
-      </span>
-    </div>
-    <button mat-raised-button color="primary" *ngIf="response != null" [disabled]="response.P1 != 0 || response.P1_access_code != 0" (click)="showAccessCode()">Book</button>
-  </mat-card>
-</div>
+<router-outlet></router-outlet>
